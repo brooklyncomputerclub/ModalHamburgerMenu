@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4R8-G8-Ocq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Side Panel View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SidePanelViewController" customModule="HamburgerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-E2-9wa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-YP-jil">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="View 1"/>
+                                        <connections>
+                                            <action selector="chooseMenuOption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agi-oM-q89"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-KM-qVt">
+                                        <rect key="frame" x="0.0" y="38" width="375" height="30"/>
+                                        <state key="normal" title="View 2"/>
+                                        <connections>
+                                            <action selector="chooseMenuOption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsv-9I-9FL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nKB-E2-9wa" secondAttribute="trailing" id="7Uc-oo-Lcx"/>
+                            <constraint firstItem="nKB-E2-9wa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q9U-j7-vMc"/>
+                            <constraint firstItem="nKB-E2-9wa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z46-QA-Wvv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="-88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Br9-TF-2T6">
+            <objects>
+                <navigationController id="4R8-G8-Ocq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IDb-m8-cEQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cwn-Hq-oHy" kind="relationship" relationship="rootViewController" id="wca-A9-m26"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvv-3D-eIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="-364"/>
+        </scene>
+        <!--View 2-->
+        <scene sceneID="kV7-Pq-YsM">
+            <objects>
+                <viewController storyboardIdentifier="viewController2" id="jGj-fv-Q0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Fn-Lt-jmR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62g-fq-dtj">
+                                <rect key="frame" x="131" y="312" width="113" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="62g-fq-dtj" firstAttribute="centerY" secondItem="0Fn-Lt-jmR" secondAttribute="centerY" id="1Um-Ev-uHe"/>
+                            <constraint firstItem="62g-fq-dtj" firstAttribute="centerX" secondItem="0Fn-Lt-jmR" secondAttribute="centerX" id="dM8-Tv-8OZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BS7-b1-G2k"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="View 2" id="0rB-Ud-zIf">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="dTN-gV-wG1">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="custom" customClass="SidePanelSegue" customModule="HamburgerTest" customModuleProvider="target" id="oGA-cG-CJk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekB-9S-bdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497" y="338"/>
+        </scene>
+        <!--View 1-->
+        <scene sceneID="7We-1s-04A">
+            <objects>
+                <viewController storyboardIdentifier="viewController1" id="Cwn-Hq-oHy" customClass="ViewController" customModule="HamburgerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c99-1d-COt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-Z8-Ja8">
+                                <rect key="frame" x="133.5" y="312" width="108" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ah1-Z8-Ja8" firstAttribute="centerX" secondItem="c99-1d-COt" secondAttribute="centerX" id="KYy-lu-M2E"/>
+                            <constraint firstItem="Ah1-Z8-Ja8" firstAttribute="centerY" secondItem="c99-1d-COt" secondAttribute="centerY" id="tfy-Ei-Cn8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3I2-no-3tc"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="View 1" id="wJf-SQ-Pbk">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="tq8-Bf-oGk">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="custom" customClass="SidePanelSegue" customModule="HamburgerTest" customModuleProvider="target" id="ye6-xa-Jhi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qro-AV-7NV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497" y="-363"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ye6-xa-Jhi"/>
+    </inferredMetricsTieBreakers>
+</document>
