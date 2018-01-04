@@ -9,6 +9,15 @@ import UIKit
 
 class SidePanelViewController: UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewTrailingConstraint: NSLayoutConstraint!
+    
+    var presenterViewOverlapWidth: CGFloat! = 0.0 {
+        didSet {
+            updateForPresenterViewOverlapWidth()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let button = sender as? UIButton else {
             return
@@ -28,6 +37,18 @@ class SidePanelViewController: UIViewController {
         }
         
         navController.viewControllers = [rootVC!]
+    }
+    
+    func updateForPresenterViewOverlapWidth() {
+        if containerViewTrailingConstraint != nil {
+            containerViewTrailingConstraint.isActive = false
+            //containerView.removeConstraint(containerViewTrailingConstraint)
+            containerViewTrailingConstraint = nil
+        }
+        
+        containerViewTrailingConstraint = containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: presenterViewOverlapWidth * -1)
+        containerViewTrailingConstraint.isActive = true
+        
     }
 
 }

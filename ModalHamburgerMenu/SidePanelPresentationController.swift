@@ -10,13 +10,12 @@ import UIKit
 class SidePanelPresentationController: UIPresentationController {
     
     var presentingViewVisibleWidth: CGFloat = 60.0
-    
     var isPresenting: Bool = false
     
     override var frameOfPresentedViewInContainerView: CGRect {
         get {
             let bounds = containerView!.bounds
-            return CGRect(x: 0.0, y: 0.0, width: bounds.size.width - presentingViewVisibleWidth, height: bounds.size.height)
+            return CGRect(x: 0.0, y: 0.0, width: bounds.size.width, height: bounds.size.height)
         }
     }
     
@@ -89,6 +88,10 @@ extension SidePanelPresentationController: UIViewControllerAnimatedTransitioning
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)!
         let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!
         
+        if let sidePanelVC = toVC as? SidePanelViewController {
+            sidePanelVC.presenterViewOverlapWidth = self.presentingViewVisibleWidth
+        }
+        
         let fromView = fromVC.view!
         let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
         
@@ -100,7 +103,7 @@ extension SidePanelPresentationController: UIViewControllerAnimatedTransitioning
         containerView.addSubview(toView)
         
         let toViewFinalFrame = transitionContext.finalFrame(for: toVC)
-        let toViewInitialFrame = CGRect(x: (containerView.bounds.size.width - presentingViewVisibleWidth) * -1, y: 0.0, width: (containerView.bounds.size.width - presentingViewVisibleWidth), height: containerView.bounds.height)
+        let toViewInitialFrame = CGRect(x: (containerView.bounds.size.width - presentingViewVisibleWidth) * -1, y: 0.0, width: (containerView.bounds.size.width), height: containerView.bounds.height)
 
         let duration = transitionDuration(using: transitionContext)
         
@@ -130,7 +133,7 @@ extension SidePanelPresentationController: UIViewControllerAnimatedTransitioning
         let toView = presentingViewController.view!
         
         var fromViewFinalFrame = transitionContext.finalFrame(for: fromVC)
-        fromViewFinalFrame.origin.x = -fromViewFinalFrame.size.width
+        fromViewFinalFrame.origin.x = -(fromViewFinalFrame.size.width - presentingViewVisibleWidth)
         
         let toViewFinalFrame = transitionContext.finalFrame(for: toVC)
         

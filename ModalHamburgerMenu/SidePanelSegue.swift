@@ -24,6 +24,6 @@ class SidePanelSegue: UIStoryboardSegue {
 
 class SidePanelDismissSegue: UIStoryboardSegue {
     public override func perform() {
-        source.presentingViewController?.dismiss(animated: true, completion: nil)
+        source.presentingViewController!.dismiss(animated: true, completion: nil)
     }
 }
