@@ -14,7 +14,7 @@
         <!--Side Panel View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SidePanelViewController" customModule="HamburgerTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SidePanelViewController" customModule="ModalHamburgerMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,14 +26,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                         <state key="normal" title="View 1"/>
                                         <connections>
-                                            <action selector="chooseMenuOption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agi-oM-q89"/>
+                                            <segue destination="4R8-G8-Ocq" kind="custom" customClass="SidePanelDismissSegue" customModule="ModalHamburgerMenu" customModuleProvider="target" id="pap-Yi-quo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-KM-qVt">
                                         <rect key="frame" x="0.0" y="38" width="375" height="30"/>
                                         <state key="normal" title="View 2"/>
                                         <connections>
-                                            <action selector="chooseMenuOption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsv-9I-9FL"/>
+                                            <segue destination="4R8-G8-Ocq" kind="custom" customClass="SidePanelDismissSegue" customModule="ModalHamburgerMenu" customModuleProvider="target" id="lbR-Ay-LID"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="-88"/>
+            <point key="canvasLocation" x="-1398" y="-388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Br9-TF-2T6">
@@ -66,7 +66,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvv-3D-eIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="-364"/>
+            <point key="canvasLocation" x="-281" y="-366"/>
         </scene>
         <!--View 2-->
         <scene sceneID="kV7-Pq-YsM">
@@ -94,19 +94,19 @@
                     <navigationItem key="navigationItem" title="View 2" id="0rB-Ud-zIf">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="dTN-gV-wG1">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="custom" customClass="SidePanelSegue" customModule="HamburgerTest" customModuleProvider="target" id="oGA-cG-CJk"/>
+                                <segue destination="BYZ-38-t0r" kind="custom" customClass="SidePanelSegue" customModule="ModalHamburgerMenu" customModuleProvider="target" id="oGA-cG-CJk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekB-9S-bdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="338"/>
+            <point key="canvasLocation" x="-282" y="1160"/>
         </scene>
         <!--View 1-->
         <scene sceneID="7We-1s-04A">
             <objects>
-                <viewController storyboardIdentifier="viewController1" id="Cwn-Hq-oHy" customClass="ViewController" customModule="HamburgerTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController1" id="Cwn-Hq-oHy" customClass="ViewController" customModule="ModalHamburgerMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c99-1d-COt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,17 +129,18 @@
                     <navigationItem key="navigationItem" title="View 1" id="wJf-SQ-Pbk">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="tq8-Bf-oGk">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="custom" customClass="SidePanelSegue" customModule="HamburgerTest" customModuleProvider="target" id="ye6-xa-Jhi"/>
+                                <segue destination="BYZ-38-t0r" kind="custom" customClass="SidePanelSegue" customModule="ModalHamburgerMenu" customModuleProvider="target" id="ye6-xa-Jhi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qro-AV-7NV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="-363"/>
+            <point key="canvasLocation" x="-282" y="402"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ye6-xa-Jhi"/>
+        <segue reference="pap-Yi-quo"/>
+        <segue reference="oGA-cG-CJk"/>
     </inferredMetricsTieBreakers>
 </document>

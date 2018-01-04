@@ -9,7 +9,7 @@ import UIKit
 
 class SidePanelViewController: UIViewController {
     
-    @IBAction func chooseMenuOption(_ sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let button = sender as? UIButton else {
             return
         }
@@ -28,8 +28,6 @@ class SidePanelViewController: UIViewController {
         }
         
         navController.viewControllers = [rootVC!]
-        
-        dismiss(animated: true, completion: nil)
     }
 
 }
