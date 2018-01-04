@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4R8-G8-Ocq">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,14 +16,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SidePanelViewController" customModule="ModalHamburgerMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBS-g8-i9Y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-E2-9wa">
-                                        <rect key="frame" x="20" y="20" width="335" height="68"/>
+                                        <rect key="frame" x="20" y="52" width="335" height="68"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-YP-jil">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -44,11 +44,12 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="75h-KM-qVt" secondAttribute="bottom" id="caO-G9-PIF"/>
                                         </constraints>
+                                        <viewLayoutGuide key="safeArea" id="XNG-lJ-dRV"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.90017361110000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="nKB-E2-9wa" firstAttribute="top" secondItem="uBS-g8-i9Y" secondAttribute="top" constant="20" symbolic="YES" id="7C2-2M-Mzm"/>
+                                    <constraint firstItem="nKB-E2-9wa" firstAttribute="top" secondItem="uBS-g8-i9Y" secondAttribute="top" constant="52" id="7C2-2M-Mzm"/>
                                     <constraint firstItem="nKB-E2-9wa" firstAttribute="leading" secondItem="uBS-g8-i9Y" secondAttribute="leading" constant="20" symbolic="YES" id="R8Q-8N-MIX"/>
                                     <constraint firstAttribute="trailing" secondItem="nKB-E2-9wa" secondAttribute="trailing" constant="20" symbolic="YES" id="fbA-fi-1An"/>
                                 </constraints>
@@ -85,7 +86,7 @@
             <objects>
                 <navigationController id="4R8-G8-Ocq" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IDb-m8-cEQ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -101,11 +102,11 @@
             <objects>
                 <viewController storyboardIdentifier="viewController2" id="jGj-fv-Q0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Fn-Lt-jmR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62g-fq-dtj">
-                                <rect key="frame" x="131" y="312" width="113" height="43"/>
+                                <rect key="frame" x="131" y="384.66666666666669" width="113" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -136,11 +137,11 @@
             <objects>
                 <viewController storyboardIdentifier="viewController1" id="Cwn-Hq-oHy" customClass="ViewController" customModule="ModalHamburgerMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c99-1d-COt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-Z8-Ja8">
-                                <rect key="frame" x="133.5" y="312" width="108" height="43"/>
+                                <rect key="frame" x="133.66666666666666" y="384.66666666666669" width="108" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
